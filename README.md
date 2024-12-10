@@ -83,8 +83,6 @@ The navigation menu is built dynamically based on the sections' data-nav attribu
 
 **JavaScript:**
 ```
-javascript
-Copy code
 // Build the navigation menu dynamically
 sections.forEach((section) => {
     const sectionID = section.id;
