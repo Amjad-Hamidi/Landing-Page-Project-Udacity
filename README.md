@@ -48,41 +48,41 @@ Follow these steps to set up and run the project locally:
 Clone this repository to your local machine using Git:
 
 ```bash
-git clone https://github.com/your-username/landing-page-project.git
-2. Navigate to the Project Directory
+git clone https://github.com/Amjad-Hamidi/landing-page-project-udacity.git
+```
+### 2. Navigate to the Project Directory
 Move into the project folder:
 
-bash
-Copy code
-cd landing-page-project
-3. Open the Project
+```bash
+cd landing-page-project-udacity
+```
+### 3. Open the Project
 Open the index.html file in any modern web browser:
 
 On Windows: Double-click the index.html file.
 On macOS/Linux: Use a browser like Chrome, Firefox, or Edge, and drag-and-drop the index.html file into the browser window.
 Alternatively, run this command to open the file directly:
 
-bash
-Copy code
+```bash
 open index.html
-Usage Instructions 🚀
-Scroll through the Page
+```
+## Usage Instructions 🚀
+### 1. Scroll through the Page
 The navigation menu highlights the current active section as you scroll.
 Active sections will also have distinct styles applied for better visibility.
 
-Click on Navigation Links
+### 2. Click on Navigation Links
 Clicking on a navigation link will smoothly scroll to the respective section.
 
-Scroll-to-Top Button
+### 3. Scroll-to-Top Button
 A button appears when scrolling down. Click the button to scroll back to the top smoothly.
 
-Code Overview
-1. Dynamic Navigation Menu
+## Code Overview
+### 1. Dynamic Navigation Menu
 The navigation menu is built dynamically based on the sections' data-nav attributes.
 
-JavaScript:
-javascript
-Copy code
+**JavaScript:**
+```
 // Build the navigation menu dynamically
 sections.forEach((section) => {
     const sectionID = section.id;
@@ -107,23 +107,23 @@ sections.forEach((section) => {
         section.scrollIntoView({ behavior: 'smooth' });
     });
 });
-2. Active Section Detection
+```
+### 2. Active Section Detection
 The getBoundingClientRect() method identifies which section is currently in the viewport.
 
-JavaScript:
-javascript
-Copy code
+**JavaScript:**
+```javascript
 // Check if a section is in the viewport
 function isInViewport(section) {
     const rect = section.getBoundingClientRect();
     return rect.top >= 0 && rect.top < 300;
 }
-3. Scroll-to-Top Button
+```
+### 3. Scroll-to-Top Button
 A button is displayed after scrolling 300px, and smooth scrolling is triggered to return to the top.
 
-JavaScript:
-javascript
-Copy code
+**JavaScript:**
+```javascript
 const scrollTopButton = document.getElementById('scrollToTop');
 
 // Display the button when scrolling down
@@ -142,12 +142,12 @@ scrollTopButton.addEventListener('click', () => {
         behavior: 'smooth',
     });
 });
-File Structure 📁
+```
+## File Structure 📁
 The project files are organized as follows:
 
-bash
-Copy code
-landing-page-project/
+```bash
+landing-page-project-udacity/
 │
 ├── css/
 │   └── styles.css        # Styles for the page
@@ -157,50 +157,35 @@ landing-page-project/
 │
 ├── index.html            # Main HTML file
 └── README.md             # Project documentation
-How It Works
-On Page Load
+```
+## How It Works
+### 1. On Page Load
 JavaScript dynamically builds the navigation menu based on existing sections.
-While Scrolling
+### 2. While Scrolling
 The active section and its corresponding navigation link are highlighted using the isInViewport function.
-On Navigation Link Click
+### 3. On Navigation Link Click
 Smooth scrolling is implemented using scrollIntoView.
-Scroll-to-Top Button
+### 4. Scroll-to-Top Button
 A button appears when scrolling 300px down and allows smooth scrolling to the top when clicked.
-Contributing 👨‍💻
+## Contributing 👨‍💻
 Contributions are welcome to improve this project! Follow these steps:
 
-Fork the repository.
-Create a new branch:
-bash
-Copy code
+### 1. Fork the repository.
+### 2. Create a new branch:
+```bash
 git checkout -b feature-name
-Commit your changes:
-bash
-Copy code
+```
+### 3. Commit your changes:
+```bash
 git commit -m "Add feature: description of feature"
-Push the branch to your forked repository:
-bash
-Copy code
+```
+### 4. Push the branch to your forked repository:
+```bash
 git push origin feature-name
-Open a Pull Request with a detailed description of your changes.
-License 📜
+```
+### 5. Open a Pull Request with a detailed description of your changes.
+## License 📜
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgments 🎓
+## Acknowledgments 🎓
 This project was developed as part of the Udacity Front-End Developer Nanodegree Program. Special thanks to Udacity for providing the resources and guidance.
-
-Why This Version Works: ✅
-All content is clearly formatted and follows proper Markdown syntax.
-Your code snippets are accurately presented and well-documented.
-The structure is professional, clear, and easy to follow.
-Any unnecessary formatting issues have been resolved.
-yaml
-Copy code
-
----
-
-### What’s Improved:
-1. **Added Code Comments** for clarity.  
-2. **Highlighted "Scroll-to-Top" Feature** explicitly.  
-3. **Linked Files** like `LICENSE` for easy access (replace links with actual URLs in your repo).  
----
