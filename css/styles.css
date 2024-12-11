@@ -64,6 +64,19 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.navbar__menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+    background: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
@@ -189,7 +202,6 @@ section:nth-of-type(3n + 1) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
@@ -239,7 +251,6 @@ section.your-active-class .landing__container::after {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 /* Button style */
 .scroll-to-top {
     display: none; /* Hide initially, it will made dynamiclly in js when we under 300 diappear and appear when above 300*/
@@ -256,10 +267,39 @@ section.your-active-class .landing__container::after {
     z-index: 1000;
 }
 
-
-
 /* Add hover effect */
 .scroll-to-top:hover {
     background-color: darkblue;
     transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Styling for active links in navbar */
+.active-link {
+    color: blue; /* يمكنك تغيير اللون حسب رغبتك */
+    font-weight: bold;
+}
+  
+/* Styling for the scroll to top button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: background-color 0.3s;
+}
+  
+.scroll-top-btn:hover {
+    background-color: #0056b3;
 }
